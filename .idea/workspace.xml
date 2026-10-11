@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/TasquesDisponiblesAnotadorsStepDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US3-tasques-disponibles-anotadors.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US5-anotacio-dada-etiquetes.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US6-marcar-dada-anotada.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US7-consulta-remuneracio-tasca.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US8-anotar-localitzcions.feature" afterDir="false" />
+    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/Dada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/Document.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/EtiquetesCategoriques.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/Imatge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/LocalitzacioObjecte.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/TascaAnotacio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/TascaAnotacioDocument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/TascaAnotacioImatge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/TasquesDisponiblesAnotadorsStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/TasquesDisponiblesAnotadorsStepDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -36,7 +41,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/DissenySoftware-26-27/dissenysoftware-26-27-p1-anotub-group-9.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/ElenaaDalmau/DS_1.git&quot;,
     &quot;accountId&quot;: &quot;284f2dab-f59d-467e-ae91-55d87e0dbe05&quot;
   }
 }</component>
@@ -62,7 +67,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#1 on main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
@@ -117,10 +122,26 @@
       <workItem from="1791474467527" duration="3140000" />
       <workItem from="1791496517913" duration="421000" />
       <workItem from="1791577454941" duration="8250000" />
+      <workItem from="1791627639016" duration="2666000" />
+      <workItem from="1791707210540" duration="6862000" />
+      <workItem from="1791737536617" duration="13790000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1791587626538</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1791587626540</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
 </project>

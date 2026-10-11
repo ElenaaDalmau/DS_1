@@ -1,17 +1,20 @@
 package edu.ub.ds2526.anotub.controlador;
 
-import edu.ub.ds2526.anotub.model.Anotadora;
+import edu.ub.ds2526.anotub.model.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Controlador {
 
-  private List<Anotadora> usuarises;
+  private final List<Anotadora> usuarises;
+  private final List<TascaAnotacio<?>> tasques;
 
   public Controlador() {
     this.usuarises = new ArrayList<>();
+    this.tasques = new ArrayList<>();
   }
 
   public Boolean eliminarUsuari(String string) {
@@ -101,6 +104,39 @@ public class Controlador {
     return "Identificació correcta.";
   }
 
+  public List<TascaAnotacio<?>> trobarTasquesDisponibles(String expertesa) {
+    List<TascaAnotacio<?>> tasquesDisponibles = new ArrayList<>();
+      for (TascaAnotacio<?> tasca : tasques) {
+          if (tasca.getExpertesaRequerida().equals(expertesa) && !tasca.isTascaAcabada()) {
+              tasquesDisponibles.add(tasca);
+          }
+      }
+    return tasquesDisponibles;
+  }
+
+  public void afegirTascaAnotacioImatge(String titol,
+                                   String instrucions,
+                                   String expertesaRequerida,
+                                   float remuneracioPerDada,
+                                   LocalDate dataLimit,
+                                   List<EtiquetesCategoriques.TipusEtiquetesCategoriques> etiquetesPermeses){
+    tasques.add(new TascaAnotacioImatge(titol, instrucions, expertesaRequerida,
+            remuneracioPerDada, dataLimit, etiquetesPermeses));
+  }
+
+  public void afegirTascaAnotacioDocument(String titol,
+                                   String instrucions,
+                                   String expertesaRequerida,
+                                   float remuneracioPerDada,
+                                   LocalDate dataLimit,
+                                   List<EtiquetesCategoriques.TipusEtiquetesCategoriques> etiquetesPermeses){
+    tasques.add(new TascaAnotacioDocument(titol, instrucions, expertesaRequerida,
+            remuneracioPerDada, dataLimit, etiquetesPermeses));
+  }
+
+
+
+
   /* Auxiliars */
 
   private Anotadora trobarUsuari(String nomUsuari) {
@@ -171,6 +207,20 @@ public class Controlador {
       return "experteses";
     }
     return null;
+  }
+
+  private TascaAnotacio<?> trobarTasca(String titolTasca) {
+    Iterator<TascaAnotacio<?>> iterator = tasques.iterator();
+    TascaAnotacio<?> tasca = null;
+
+    while (iterator.hasNext()) {
+      TascaAnotacio<?> actual = iterator.next();
+      if (actual.getTitol().equals(titolTasca)) {
+        tasca = actual;
+      }
+    }
+
+    return tasca;
   }
 
 }
