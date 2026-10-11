@@ -1,6 +1,6 @@
 package edu.ub.ds2526.anotub.model;
 
-public abstract class EtiquetesCategoriques {
+public class EtiquetesCategoriques {
 
     // Enum de tipus d'etiquetes categòriques:
     public enum TipusEtiquetesCategoriques {
