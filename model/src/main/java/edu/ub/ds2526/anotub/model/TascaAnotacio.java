@@ -125,11 +125,11 @@ public abstract class TascaAnotacio<T> {
     }
 
     /**
-     * Mètode que comprova si la tasca està acabada.
-     * @return true si la tasca està acabada, false en cas contrari.
+     * Mètode que comprova si la tasca està disponible
+     * @return true si la tasca està disponible, fals en cas contrari.
      */
-    public boolean isTascaAcabada() {
-        return estatTasca == EstatsTasca.ACABADA;
+    public boolean isTascaDisponible(){
+        return estatTasca == EstatsTasca.DISPONIBLE;
     }
 
     /**
@@ -145,17 +145,17 @@ public abstract class TascaAnotacio<T> {
     @Override
     public String toString() {
         return "TascaAnotacio{" +
-                "titol='" + titol  +
-                ", instrucions='" + instrucions +
-                ", expertesaRequerida='" + expertesaRequerida +
+                "titol=" + titol  +
+                ", instrucions=" + instrucions +
+                ", expertesaRequerida=" + expertesaRequerida +
                 ", remuneracio=" + remuneracio +
                 ", remuneracioPerDada=" + remuneracioPerDada +
                 ", dataLimit=" + dataLimit +
                 ", dadesFetes=" + dadesFetes.size() +
                 ", dadesPendents=" + dadesPendents.size() +
                 ", anotadoraAsignada=" + (anotadoraAsignada != null ? anotadoraAsignada.getNomUsuari() : "Cap") +
-                ", estatTasca=" + estatTasca +
-                ", etiquetesPermeses=" + etiquetesPermeses +
+                ", estatTasca=" + estatTasca.toString() +
+                ", etiquetesPermeses=" + etiquetesPermeses.toString() +
                 ", tipusTasca=" + this.getClass().getSimpleName() +
                 '}';
     }

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos" />
+    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="Commit 1.1:&#10;   - Quite abstract colado en EtiquetesCategoriques.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/TasquesDisponiblesAnotadorsStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/TasquesDisponiblesAnotadorsStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US3-tasques-disponibles-anotadors.feature" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US3-tasques-disponibles-anotadors.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/TascaAnotacio.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/TascaAnotacio.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +118,10 @@
       <workItem from="1791577454941" duration="8250000" />
       <workItem from="1791627639016" duration="2666000" />
       <workItem from="1791707210540" duration="6862000" />
-      <workItem from="1791737536617" duration="14168000" />
+      <workItem from="1791737536617" duration="15007000" />
+      <workItem from="1791795197285" duration="3200000" />
+      <workItem from="1791798461270" duration="1174000" />
+      <workItem from="1791817725199" duration="2903000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -130,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791760966140</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit 1.1:&#10;   - Quite abstract colado en EtiquetesCategoriques.java">
+      <option name="closed" value="true" />
+      <created>1791761271275</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1791761271275</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +156,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos" />
+    <MESSAGE value="Commit 1.1:&#10;   - Quite abstract colado en EtiquetesCategoriques.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 1.1:&#10;   - Quite abstract colado en EtiquetesCategoriques.java" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

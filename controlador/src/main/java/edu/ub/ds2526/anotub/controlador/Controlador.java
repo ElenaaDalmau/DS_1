@@ -104,14 +104,34 @@ public class Controlador {
     return "Identificació correcta.";
   }
 
-  public List<TascaAnotacio<?>> trobarTasquesDisponibles(String expertesa) {
+  public String trobarTasquesDisponibles(String expertesa) {
     List<TascaAnotacio<?>> tasquesDisponibles = new ArrayList<>();
+
       for (TascaAnotacio<?> tasca : tasques) {
-          if (tasca.getExpertesaRequerida().equals(expertesa) && !tasca.isTascaAcabada()) {
+          if (tasca.getExpertesaRequerida().equals(expertesa) && tasca.isTascaDisponible()) {
               tasquesDisponibles.add(tasca);
           }
       }
-    return tasquesDisponibles;
+
+      String resultat;
+      if(tasquesDisponibles.isEmpty()) {
+        resultat = "NO hi ha tasques disponibles";
+      }
+      else{
+        resultat = tasquesDisponibles.toString();
+      }
+
+      return resultat;
+  }
+
+  public void canviarEstatTasca(TascaAnotacio.EstatsTasca estatTascaNou, String titolTasca) {
+    TascaAnotacio<?> tasca = trobarTasca(titolTasca);
+    tasca.setEstatTasca(estatTascaNou);
+  }
+
+  public void eliminarTasca(String titolTasca) {
+    TascaAnotacio<?> tasca = trobarTasca(titolTasca);
+    tasques.remove(tasca);
   }
 
   public void afegirTascaAnotacioImatge(String titol,

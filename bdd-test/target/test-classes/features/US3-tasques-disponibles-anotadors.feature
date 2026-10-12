@@ -1,19 +1,24 @@
 Feature: US3 - Tasques disponibles per a l'anotador
-  Com a anotador amb expertesses
+  Com a anotador amb experteses
   Vull veure les tasques disponibles per a mi
   Per així poder seleccionar-ne un per anotar-ne dades
 
-    Scenario: L'anotador amb expertesses té tasques disponibles
-        Given l'anotadora "elena-dalmau" té les expertesa de "biologia"
-        When l'anotador accedeix a la secció de tasques disponibles
-        Then el sistema li mostra totes les tasques disponibles per la seva expertesa
+    Scenario: Hi ha tasques disponibles per la expertesa del anotador
+        Given l'anotador-a identificat  "alex" de cognoms "bernausgonzales" té la expertesa de "Biologia"
+        When l'anotador-a accedeix a la llista de tasques disponibles de expertesa "Biologia"
+        Then el sistema mostra totes les tasques disponibles per la expertesa "Biologia"
 
-    Scenario: L'anotador amb expertesses no té tasques disponibles per la seva expertesa
-        Given l'anotador "eduardo-funez" té les expertesa de "Arquitectura"
-        When l'anotador accedeix a la secció de tasques disponibles
-        Then el sistema li mostra un missatge indicant que no hi ha tasques disponibles per la seva expertesa
+    Scenario: No hi ha cap tasca disponible per l’expertesa del anotador
+        Given l'anotador-a identificat  "alex" de cognoms "bernausgonzales" té la expertesa de "Medicina"
+        When l'anotador-a accedeix a la llista de tasques disponibles de expertesa "Medicina"
+        Then el sistema mostra un missatge d'error "NO hi ha tasques disponibles", expertesa diferent de "Medicina"
 
-    Scenario: L'anotador amb expertesses no té tasques disponibles, ja que està totes finalitzades
-        Given l'anotador "jeser-guillen" té les expertesa de "Neurologia"
-        When l'anotador accedeix a la secció de tasques disponibles
-        Then el sistema li mostra un missatge de error que dirà “no hi ha tasques amb aquesta expertesa”
+    Scenario: No hi ha cap tasca disponible, ja que està totes finalitzades
+        Given l'anotador-a identificat  "alex" de cognoms "bernausgonzales" té la expertesa de "Astronomia"
+        When l'anotador-a accedeix a la llista de tasques disponibles de expertesa "Astronomia"
+        Then el sistema mostra un missatge d'error "NO hi ha tasques disponibles", tasca acabada de "Astronomia"
+
+    Scenario: No hi ha cap tasca disponible, tasca amb data límit vençuda
+        Given l'anotador-a identificat  "alex" de cognoms "bernausgonzales" té la expertesa de "Historia"
+        When l'anotador-a accedeix a la llista de tasques disponibles de expertesa "Historia"
+        Then el sistema mostra un missatge d'error "NO hi ha tasques disponibles", tasca expirada de "Historia"
