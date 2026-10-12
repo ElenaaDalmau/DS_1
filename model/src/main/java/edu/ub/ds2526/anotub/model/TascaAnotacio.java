@@ -6,9 +6,9 @@ import java.util.List;
 public abstract class TascaAnotacio<T> {
 
     public enum EstatsTasca {
-        DISPONIBLE,
-        ACABADA,
-        NO_DISPONIBLE
+        PENDENT,
+        ASSIGNADA,
+        COMPLETA
     }
 
     // Atributs privats
@@ -37,7 +37,7 @@ public abstract class TascaAnotacio<T> {
             this.remuneracio = 0.0f;
             this.dataLimit = dataLimit;
             this.anotadoraAsignada = null;
-            this.estatTasca = EstatsTasca.DISPONIBLE;
+            this.estatTasca = EstatsTasca.PENDENT;
             this.etiquetesPermeses = etiquetesPermeses;
         }
 
@@ -112,7 +112,7 @@ public abstract class TascaAnotacio<T> {
      */
     public void assignarTasca(Anotadora anotadoraAsignada){
         setAnotadoraAsignada(anotadoraAsignada);
-        setEstatTasca(EstatsTasca.NO_DISPONIBLE);
+        setEstatTasca(EstatsTasca.ASSIGNADA);
     }
 
     /**
@@ -120,7 +120,7 @@ public abstract class TascaAnotacio<T> {
      */
     public void avaluarEstatTasca() {
         if (dadesPendents.isEmpty()) {
-            setEstatTasca(EstatsTasca.ACABADA);
+            setEstatTasca(EstatsTasca.COMPLETA);
         }
     }
 
@@ -129,7 +129,7 @@ public abstract class TascaAnotacio<T> {
      * @return true si la tasca està disponible, fals en cas contrari.
      */
     public boolean isTascaDisponible(){
-        return estatTasca == EstatsTasca.DISPONIBLE;
+        return estatTasca == EstatsTasca.PENDENT;
     }
 
     /**

@@ -72,14 +72,14 @@ public class TasquesDisponiblesAnotadorsStepDefs {
 
     @Then("el sistema mostra un missatge d'error {string}, tasca acabada de {string}")
     public void cap_tasca_no_acabada_disponible(String missatge, String expertesa){
-        state.controlador.canviarEstatTasca(TascaAnotacio.EstatsTasca.ACABADA, "Tasca Testable");
+        state.controlador.canviarEstatTasca(TascaAnotacio.EstatsTasca.COMPLETA, "Tasca Testable");
 
         assert(state.controlador.trobarTasquesDisponibles(expertesa).equals(missatge));
     }
 
     @Then("el sistema mostra un missatge d'error {string}, tasca expirada de {string}")
     public void cap_tasca_pendent_disponible(String missatge, String expertesa){
-        state.controlador.canviarEstatTasca(TascaAnotacio.EstatsTasca.NO_DISPONIBLE, "Tasca Testable");
+        state.controlador.canviarEstatTasca(TascaAnotacio.EstatsTasca.ASSIGNADA, "Tasca Testable");
 
         assert(state.controlador.trobarTasquesDisponibles(expertesa).equals(missatge));
     }

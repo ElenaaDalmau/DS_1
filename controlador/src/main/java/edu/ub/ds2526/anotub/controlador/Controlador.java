@@ -9,18 +9,18 @@ import java.util.List;
 
 public class Controlador {
 
-  private final List<Anotadora> usuarises;
+  private final List<Anotadora> usuaries;
   private final List<TascaAnotacio<?>> tasques;
 
   public Controlador() {
-    this.usuarises = new ArrayList<>();
+    this.usuaries = new ArrayList<>();
     this.tasques = new ArrayList<>();
   }
 
   public Boolean eliminarUsuari(String string) {
     Anotadora anotadora = trobarUsuari(string);
     if (anotadora != null) {
-      return usuarises.remove(anotadora);
+      return usuaries.remove(anotadora);
     }
     return false;
   }
@@ -81,7 +81,7 @@ public class Controlador {
         experteses
     );
 
-    usuarises.add(anotadora);
+    usuaries.add(anotadora);
 
     return "L'usuari s'ha registrat amb èxit.";
   }
@@ -129,7 +129,7 @@ public class Controlador {
     tasca.setEstatTasca(estatTascaNou);
   }
 
-  public void eliminarTasca(String titolTasca) {
+  public void eliminarTasca(String titolTasca)  {
     TascaAnotacio<?> tasca = trobarTasca(titolTasca);
     tasques.remove(tasca);
   }
@@ -160,7 +160,7 @@ public class Controlador {
   /* Auxiliars */
 
   private Anotadora trobarUsuari(String nomUsuari) {
-    return usuarises.stream()
+    return usuaries.stream()
         .filter(anotadora -> anotadora.getNomUsuari().equals(nomUsuari))
         .findFirst()
         .orElse(null);
