@@ -6,9 +6,9 @@ import java.util.List;
 public abstract class TascaAnotacio<T> {
 
     public enum EstatsTasca {
-        DISPONIBLE,
-        ACABADA,
-        NO_DISPONIBLE
+        PENDENT,
+        ASSIGNADA,
+        COMPLETA
     }
 
     // Atributs privats
@@ -37,7 +37,7 @@ public abstract class TascaAnotacio<T> {
             this.remuneracio = 0.0f;
             this.dataLimit = dataLimit;
             this.anotadoraAsignada = null;
-            this.estatTasca = EstatsTasca.DISPONIBLE;
+            this.estatTasca = EstatsTasca.PENDENT;
             this.etiquetesPermeses = etiquetesPermeses;
         }
 
@@ -112,7 +112,7 @@ public abstract class TascaAnotacio<T> {
      */
     public void assignarTasca(Anotadora anotadoraAsignada){
         setAnotadoraAsignada(anotadoraAsignada);
-        setEstatTasca(EstatsTasca.NO_DISPONIBLE);
+        setEstatTasca(EstatsTasca.ASSIGNADA);
     }
 
     /**
@@ -120,16 +120,16 @@ public abstract class TascaAnotacio<T> {
      */
     public void avaluarEstatTasca() {
         if (dadesPendents.isEmpty()) {
-            setEstatTasca(EstatsTasca.ACABADA);
+            setEstatTasca(EstatsTasca.COMPLETA);
         }
     }
 
     /**
-     * Mètode que comprova si la tasca està acabada.
-     * @return true si la tasca està acabada, false en cas contrari.
+     * Mètode que comprova si la tasca està disponible
+     * @return true si la tasca està disponible, fals en cas contrari.
      */
-    public boolean isTascaAcabada() {
-        return estatTasca == EstatsTasca.ACABADA;
+    public boolean isTascaDisponible(){
+        return estatTasca == EstatsTasca.PENDENT;
     }
 
     /**
@@ -145,17 +145,17 @@ public abstract class TascaAnotacio<T> {
     @Override
     public String toString() {
         return "TascaAnotacio{" +
-                "titol='" + titol  +
-                ", instrucions='" + instrucions +
-                ", expertesaRequerida='" + expertesaRequerida +
+                "titol=" + titol  +
+                ", instrucions=" + instrucions +
+                ", expertesaRequerida=" + expertesaRequerida +
                 ", remuneracio=" + remuneracio +
                 ", remuneracioPerDada=" + remuneracioPerDada +
                 ", dataLimit=" + dataLimit +
                 ", dadesFetes=" + dadesFetes.size() +
                 ", dadesPendents=" + dadesPendents.size() +
                 ", anotadoraAsignada=" + (anotadoraAsignada != null ? anotadoraAsignada.getNomUsuari() : "Cap") +
-                ", estatTasca=" + estatTasca +
-                ", etiquetesPermeses=" + etiquetesPermeses +
+                ", estatTasca=" + estatTasca.toString() +
+                ", etiquetesPermeses=" + etiquetesPermeses.toString() +
                 ", tipusTasca=" + this.getClass().getSimpleName() +
                 '}';
     }

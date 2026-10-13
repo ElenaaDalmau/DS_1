@@ -1,0 +1,78 @@
+@startuml
+
+title __AnotUB Class Diagram__\n
+
+    class AnotUB{
+	- margeBenefici: Double
+	}
+
+    class Empresa{
+	- nom: String
+	- paísFiscal: String
+	- vat: String
+	- email: String
+	- telèfon: String
+	}
+
+    class Anotador{
+	- nomUsuari: String
+	- Contrasenya: String
+	- passaport: Passaport
+	- compteBancari: CompteBancari
+	- email: String
+	- telèfon: String
+	}
+
+     class Tasca{
+	- titol: String
+	- instruccions: String
+	- dataLimit: Date
+	- remuneracióPerDada: Double
+	- remuneració: Double
+	}
+
+     class Dada{
+	- anotada: Boolean
+	}
+
+     class Categoria{
+	- nom: String
+	}
+
+     enum EstatTasca{
+	PENDENT
+	ASSIGNADA
+	COMPLETA
+	}
+
+     class Expertesa{
+	- nom: String
+	}
+
+     class Imatge{
+	- amplada: int
+	- alçada: int
+	- pixels: List<int, int, int, int, int>
+	}
+
+     class Document{
+	- text: String
+	}
+
+     class LocalitzacióObjecte{
+	- id: int
+	}
+
+  AnotUB "1" -- "1...*" Anotador : disposaDe >
+  AnotUB "1" -- "1...*" Tasca : publica >
+  Anotador "1" -- "*" Expertesa : declara >
+  Empresa "1" -- "1...*" Tasca : enviadaPer >
+  Tasca "1" -- "1...*" Dada : involucra >
+  Tasca "1" -- "1...*" EstatTasca : té >
+  Categoria "*" -- "1" Dada : anota >
+  LocalitzacióObjecte "0...*" -- "1" Imatge : anota >
+
+  Dada <|-- Imatge
+  Dada <|-- Document
+  
+@enduml
