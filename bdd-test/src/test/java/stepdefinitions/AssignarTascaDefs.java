@@ -73,68 +73,86 @@ public class AssignarTascaDefs {
 
     // ----------------------------------------------------------------------------------------------------------------
 
+    @Given("no hi ha tasques disponibles per a l'anotador {string} {string}")
+    public void noHiHaTasquesDisponiblesPerALAnotador(String nom, String cognom) {
+        // Eliminem primer l'usuari testejable, per si hem de canviar les dades internament pel suposat test:
+        state.controlador.eliminarUsuari(nom);
 
-    @Given("hi ha una tasca disponible que no està assignada")
-    public void hiHaUnaTascaDisponibleQueNoEstàAssignada(String expertesa) {
-        // Write code here that turns the phrase above into concrete actions
-        state.getControlador().trobarTasquesDisponibles(expertesa);
+        // Afegim l'usuari pel test:
+        state.controlador.registrarUsuari(
+                nom,
+                "Password123",
+                nom,
+                cognom,
+                "ESP",
+                "ABC123456",
+                LocalDate.parse("2030-12-31"),
+                "ES9121000418450200051332",
+                "CAIXESBBXXX",
+                nom + "@example.com",
+                "600123123",
+                List.of("Expertesa sense tasques"));
 
-        // assertTrue(assert.getResultat().contains(titolTasca));
     }
 
-    @When("l'anotador selecciona una tasca disponible i demana assignar-se-la")
-    public void lAnotadorSeleccionaUnaTascaDisponibleIDemanaAssignarSeLa(String titolTasca, String nomUsuari) {
+    @When("l'anotador {string} consulta les tasques disponibles")
+    public void lAnotadorConsultaLesTasquesDisponibles(String nom) {
         // Write code here that turns the phrase above into concrete actions
-        state.setResultat(state.getControlador().assignarTascaAAnotadora(titolTasca, nomUsuari));
-    }
-
-    @Then("el sistema li assigna la tasca a l'anotador")
-    public void elSistemaLiAssignaLaTascaALAnotador(String titolTasca, String nomUsuari) {
-        // Write code here that turns the phrase above into concrete actions
-        assertEquals("La tasca s'ha assignat correctament", state.getResultat());
-    }
-
-//    @And("la tasca deixa de estar disponible per a la resta d anotadors")
-//    public void laTascaDeixaDeEstarDisponiblePerALaRestaDAnotadors(TascaAnotacio.EstatsTasca estatTascaNou, String titolTasca) {
-//        // Write code here that turns the phrase above into concrete actions
-//        state.getControlador().canviarEstatTasca(estatTascaNou, titolTasca);
-//    }
-
-    @Given("no hi ha tasques disponibles per a l'anotador")
-    public void noHiHaTasquesDisponiblesPerALAnotador() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @When("l'anotador consulta les tasques disponibles")
-    public void lAnotadorConsultaLesTasquesDisponibles(String expertesa){
-        // Write code here that turns the phrase above into concrete actions
-        state.getControlador().trobarTasquesDisponibles(expertesa);
+        String resultat = state.controlador.trobarTasquesDisponibles("Expertesa sense tasques");
+        state.setResultat(resultat);
     }
 
     @Then("el sistema no mostra cap tasca disponible")
-    public void elSistemaNoMostraCapTascaDisponible() {
+    public void elSistemaNoMostraCapTascaDisponible(String tasca, String usuari){
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        assertEquals(state.getResultat(), "NO hi ha tasques disponibles");
     }
 
-
-    @Given("hi ha una tasca completada")
-    public void hiHaUnaTascaCompletada() {
+    @Given("hi ha una tasca {string} completada i tenim un usuari {string} {string}")
+    public void hiHaUnaTascaCompletadaITenimUnUsuari(String tasca, String nom, String cognom) {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        // Eliminem primer l'usuari testejable, per si hem de canviar les dades internament pel suposat test:
+        state.controlador.eliminarUsuari(nom);
+
+        // Afegim l'usuari pel test:
+        state.controlador.registrarUsuari(
+                nom,
+                "Password123",
+                nom,
+                cognom,
+                "ESP",
+                "ABC123456",
+                LocalDate.parse("2030-12-31"),
+                "ES9121000418450200051332",
+                "CAIXESBBXXX",
+                nom + "@example.com",
+                "600123123",
+                List.of("Biologia"));
+
+        // Hem de crear una tasca per tal de testejar, i seguirem la mateixa lògica que abans:
+        state.controlador.eliminarTasca(tasca);
+        state.controlador.afegirTascaAnotacioImatge(
+                tasca,
+                "Anotar les diferencies de les imatges",
+                "Biologia",
+                100.0f,
+                LocalDate.parse("2030-12-31"),
+                List.of(EtiquetesCategoriques.TipusEtiquetesCategoriques.GLOBAL_IMATGE,
+                        EtiquetesCategoriques.TipusEtiquetesCategoriques.LOCALITZACIO_OBJECTE));
+    // Canviem l'estat de la tasca a COMPLETADA:
+        state.controlador.canviarEstatTasca(TascaAnotacio.EstatsTasca.COMPLETA, tasca);
+
     }
 
-    @When("l'anotador intenta assignar-se la tasca completada")
-    public void lAnotadorIntentaAssignarSeLaTascaCompletada(String titolTasca, String nomUsuari) {
+    @When("l'anotador {string} intenta assignar-se la tasca {string} completada")
+    public void lAnotadorIntentaAssignarSeLaTascaCompletada(String nom, String tasca) {
         // Write code here that turns the phrase above into concrete actions
-        state.getControlador().assignarTascaAAnotadora(titolTasca, nomUsuari);
+        state.controlador.assignarTascaAAnotadora(tasca, nom);
     }
 
-    @Then("el sistema no li permet assignar-se la tasca completada")
-    public void elSistemaNoPermetAssignarLiLaTascaCompletada() {
+    @Then("el sistema no li permet assignar-se la tasca {string} completada")
+    public void elSistemaNoLiPermetAssignarSeLaTascaCompletada(String tasca) {
         // Write code here that turns the phrase above into concrete actions
-        assertEquals("No s'ha pogut assignar la tasca. La tasca ja està completada.", state.getResultat());
+        assertTrue(state.controlador.mateixEstatTasca(TascaAnotacio.EstatsTasca.COMPLETA, tasca));
     }
-
 }

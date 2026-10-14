@@ -280,7 +280,17 @@ public class Controlador {
         tasca = actual;
       }
     }
-
     return tasca;
   }
+
+  public void afegirTascaCompletada(String titol,
+                                        String instrucions,
+                                        String expertesaRequerida,
+                                        float remuneracioPerDada,
+                                        LocalDate dataLimit,
+                                        List<EtiquetesCategoriques.TipusEtiquetesCategoriques> etiquetesPermeses){
+    tasques.add(new TascaAnotacioImatge(titol, instrucions, expertesaRequerida,
+            remuneracioPerDada, dataLimit, etiquetesPermeses));
+  }
+
 }
