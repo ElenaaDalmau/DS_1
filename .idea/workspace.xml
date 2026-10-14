@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="Commit 3:&#10;      - DSAnotUB.puml creat amb el Model de Domini de l'enunciat, només he ficat Expertesa com a clase">
-      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/AnotacioDadaAmbEtiquetesStepDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/ConsultaRemuneracioTascaStepDefs.java" afterDir="false" />
+    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="TEST">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/TasquesDisponiblesAnotadorsStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/TasquesDisponiblesAnotadorsStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US5-anotacio-dada-etiquetes.feature" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US5-anotacio-dada-etiquetes.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US7-consulta-remuneracio-tasca.feature" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US7-consulta-remuneracio-tasca.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/java/state/WorldState.java" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/java/state/WorldState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/AssignarTascaDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/AssignarTascaDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US4-assignar-una-tasca.feature" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US4-assignar-una-tasca.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/TascaAnotacio.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/TascaAnotacio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -40,7 +42,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/ElenaaDalmau/DS_1.git&quot;,
-    &quot;accountId&quot;: &quot;284f2dab-f59d-467e-ae91-55d87e0dbe05&quot;
+    &quot;accountId&quot;: &quot;8466033c-a8c3-4628-8a2d-40434763199f&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -58,14 +60,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Cucumber Java.Feature: US3-assignacio-tasques-anotadors.executor": "Run",
-    "Cucumber Java.Feature: US3-tasques-disponibles-anotadors.executor": "Run",
+    "Cucumber Java.Feature: US4-assignar-una-tasca.executor": "Run",
     "Cucumber Java.Scenario: L'anotador amb expertesses té tasques disponibles.executor": "Run",
     "JUnit.RunCucumberTests.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -73,15 +74,28 @@
     "node.js.detected.package.jshint": "true",
     "node.js.selected.package.jshint": "",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\usuario\disseny software\DS_1" />
-    </key>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Cucumber Java.Feature: US4-assignar-una-tasca">
+    <configuration name="Feature: US4-assignar-una-tasca" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/bdd-test/src/test/resources/features/US4-assignar-una-tasca.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="bdd-test" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
+      <option name="SUGGESTED_NAME" value="Feature: US4-assignar-una-tasca" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: L'anotador amb expertesses té tasques disponibles" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/bdd-test/src/test/resources/features/US3-tasques-disponibles-anotadors.feature" />
@@ -103,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: US4-assignar-una-tasca" />
         <item itemvalue="Cucumber Java.Scenario: L'anotador amb expertesses té tasques disponibles" />
       </list>
     </recent_temporary>
@@ -110,8 +125,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33813.55" />
       </set>
     </attachedChunks>
   </component>
@@ -130,10 +144,7 @@
       <workItem from="1791577454941" duration="8250000" />
       <workItem from="1791627639016" duration="2666000" />
       <workItem from="1791707210540" duration="6862000" />
-      <workItem from="1791737536617" duration="15007000" />
-      <workItem from="1791795197285" duration="3200000" />
-      <workItem from="1791798461270" duration="1174000" />
-      <workItem from="1791817725199" duration="14507000" />
+      <workItem from="1791737536617" duration="14168000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -151,29 +162,29 @@
       <option name="project" value="LOCAL" />
       <updated>1791760966140</updated>
     </task>
-    <task id="LOCAL-00003" summary="Commit 1.1:&#10;   - Quite abstract colado en EtiquetesCategoriques.java">
+    <task id="LOCAL-00003" summary="TEST">
       <option name="closed" value="true" />
-      <created>1791761271275</created>
+      <created>1791813535552</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1791761271275</updated>
+      <updated>1791813535552</updated>
     </task>
-    <task id="LOCAL-00004" summary="Commit 2:&#10;      - Controlador.java añadido nuevos mètodos para eliminar, buscar i canviar estats de tasques. &#10;      - TascaAnotacio.java mètode per test&#10;      - US3 Test Fet">
+    <task id="LOCAL-00004" summary="TEST">
       <option name="closed" value="true" />
-      <created>1791820982937</created>
+      <created>1791909342073</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1791820982939</updated>
+      <updated>1791909342073</updated>
     </task>
-    <task id="LOCAL-00005" summary="Commit 3:&#10;      - DSAnotUB.puml creat amb el Model de Domini de l'enunciat, només he ficat Expertesa com a clase">
+    <task id="LOCAL-00005" summary="TEST">
       <option name="closed" value="true" />
-      <created>1791834821725</created>
+      <created>1791909723691</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1791834821725</updated>
+      <updated>1791909723691</updated>
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
@@ -181,16 +192,21 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos" />
-    <MESSAGE value="Commit 1.1:&#10;   - Quite abstract colado en EtiquetesCategoriques.java" />
-    <MESSAGE value="Commit 2:&#10;      - Controlador.java añadido nuevos mètodos para eliminar, buscar i canviar estats de tasques. &#10;      - TascaAnotacio.java mètode per test&#10;      - US3 Test Fet" />
-    <MESSAGE value="Commit 3:&#10;      - DSAnotUB.puml creat amb el Model de Domini de l'enunciat, només he ficat Expertesa com a clase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 3:&#10;      - DSAnotUB.puml creat amb el Model de Domini de l'enunciat, només he ficat Expertesa com a clase" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="TEST" />
+    <option name="LAST_COMMIT_MESSAGE" value="TEST" />
   </component>
 </project>

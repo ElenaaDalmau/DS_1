@@ -1,94 +1,57 @@
 package stepdefinitions;
 
+import edu.ub.ds2526.anotub.model.TascaAnotacio;
 import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import state.WorldState;
 
 public class AssignarTascaDefs {
-    @Given("l'anotador {string} està identificat al sistema")
-    public void lAnotadorEstàIdentificatAlSistema(String arg0) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+
+    private final WorldState state;
+
+    public AssignarTascaDefs(WorldState state) {
+        this.state = state;
     }
 
-    @And("hi ha una tasca disponible que no està assignada")
-    public void hiHaUnaTascaDisponibleQueNoEstàAssignada() {
+    @Given("hi ha una tasca disponible que no està assignada")
+    public void hiHaUnaTascaDisponibleQueNoEstàAssignada(String expertesa) {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        state.getControlador().trobarTasquesDisponibles(expertesa);
+
+        assertTrue(assert.getResultat().contains(titolTasca));
     }
 
-    @When("l'anotador {string} selecciona una tasca disponible")
-    public void lAnotadorSeleccionaUnaTascaDisponible(String arg0) {
+    @When("l'anotador selecciona una tasca disponible i demana assignar-se-la")
+    public void lAnotadorSeleccionaUnaTascaDisponibleIDemanaAssignarSeLa(String titolTasca, String nomUsuari) {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("s'assigna la tasca seleccionada")
-    public void sAssignaLaTascaSeleccionada() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        state.setResultat(state.getControlador().assignarTascaAAnotadora(titolTasca, nomUsuari));
     }
 
     @Then("el sistema li assigna la tasca a l'anotador")
-    public void elSistemaLiAssignaLaTascaALAnotador() {
+    public void elSistemaLiAssignaLaTascaALAnotador(String titolTasca, String nomUsuari) {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        assertEquals("La tasca s'ha assignat correctament", state.getResultat());
     }
 
-    @And("l'anotador pot començar a etiquetar les dades")
-    public void lAnotadorPotComençarAEtiquetarLesDades() {
+    @And("la tasca deixa de estar disponible per a la resta d anotadors")
+    public void laTascaDeixaDeEstarDisponiblePerALaRestaDAnotadors(TascaAnotacio.EstatsTasca estatTascaNou, String titolTasca) {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        state.getControlador().canviarEstatTasca(estatTascaNou, titolTasca);
     }
 
-    @And("la tasca deixa d{string}anotadors")
-    public void laTascaDeixaDEstarDisponiblePerALaRestaDAnotadors() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("la tasca està assignada a un altre anotador")
-    public void laTascaEstàAssignadaAUnAltreAnotador() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @When("l'anotador intenta assignar-se la tasca")
-    public void lAnotadorIntentaAssignarSeLaTasca() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @Then("el sistema no li permet assignar-se la tasca")
-    public void elSistemaNoLiPermetAssignarSeLaTasca() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("la tasca continua assignada a l'altre anotador")
-    public void laTascaContinuaAssignadaALAltreAnotador() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @Given("l'anotador {string} esta identificat al sistema")
-    public void lAnotadorEstaIdentificatAlSistema(String arg0) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("no hi ha tasques disponibles per a l'anotador")
+    @Given("no hi ha tasques disponibles per a l'anotador")
     public void noHiHaTasquesDisponiblesPerALAnotador() {
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
 
     @When("l'anotador consulta les tasques disponibles")
-    public void lAnotadorConsultaLesTasquesDisponibles() {
+    public void lAnotadorConsultaLesTasquesDisponibles(String expertesa){
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        state.getControlador().trobarTasquesDisponibles(expertesa);
     }
 
     @Then("el sistema no mostra cap tasca disponible")
@@ -97,22 +60,23 @@ public class AssignarTascaDefs {
         throw new PendingException();
     }
 
-    @And("hi ha una tasca completada")
+
+    @Given("hi ha una tasca completada")
     public void hiHaUnaTascaCompletada() {
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
 
     @When("l'anotador intenta assignar-se la tasca completada")
-    public void lAnotadorIntentaAssignarSeLaTascaCompletada() {
+    public void lAnotadorIntentaAssignarSeLaTascaCompletada(String titolTasca, String nomUsuari) {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        state.getControlador().assignarTascaAAnotadora(titolTasca, nomUsuari);
     }
 
-    @Then("el sistema no permet assignar-li la tasca completada")
+    @Then("el sistema no li permet assignar-se la tasca completada")
     public void elSistemaNoPermetAssignarLiLaTascaCompletada() {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        assertEquals("No s'ha pogut assignar la tasca. La tasca ja està completada.", state.getResultat());
     }
 
 }

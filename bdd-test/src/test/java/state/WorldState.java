@@ -21,5 +21,6 @@ public class WorldState {
   public void setResultat(String resultat) {
     this.resultat = resultat;
   }
+
 }
 

@@ -243,4 +243,24 @@ public class Controlador {
     return tasca;
   }
 
+  public String assignarTascaAAnotadora(String titolTasca, String nomUsuari) {
+    TascaAnotacio<?> tasca = trobarTasca(titolTasca);
+    Anotadora anotadora = trobarUsuari(nomUsuari);
+
+    if (tasca == null) {
+      return "No s'ha pogut assignar la tasca.";
+    }
+
+    if (anotadora == null) {
+      return "No s'ha pogut assignar la tasca.";
+    }
+
+    if (!tasca.getExpertesaRequerida().contains(tasca.getTitol())) {
+      return "No s'ha pogut assignar la tasca. L'usuari no té l'expertesa requerida.";
+    }
+
+    tasca.setAnotadoraAsignada(anotadora);
+    return "La tasca s'ha assignat correctament a l'usuari.";
+  }
+
 }
