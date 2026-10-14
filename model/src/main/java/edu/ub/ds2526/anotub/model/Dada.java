@@ -9,12 +9,15 @@ public abstract class Dada {
     private final String titol;
     private final TascaAnotacio<?> tascaAsociada;
     private List<EtiquetesCategoriques> etiquetes;
+    private boolean anotada;
+
 
     // Constructor:
     public Dada(String titol, TascaAnotacio<?> tascaAsociada) {
         this.titol = titol;
         this.tascaAsociada = tascaAsociada;
         this.etiquetes = new ArrayList<>();
+        this.anotada = false;
     }
 
     // Getters i Setters:

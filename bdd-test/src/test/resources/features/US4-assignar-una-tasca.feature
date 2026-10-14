@@ -4,10 +4,10 @@ Feature: US4 - Assignar una tasca a un anotador
   Per així jo poder començar a anotar-ne dades
 
   Scenario: Hi ha tasques disponibles i l'anotador se n'assigna una
-    Given hi ha una tasca disponible que no està assignada
-    When l'anotador selecciona una tasca disponible i demana assignar-se-la
-    Then el sistema li assigna la tasca a l'anotador
-    And la tasca deixa de estar disponible per a la resta d anotadors
+    Given anotador identificat "alvaro" "cardoso" i hi ha una tasca "T1" disponible d'expertesa "Astronomia"
+    When anotador "alvaro" selecciona la tasca "T1" disponible i demana assignar-se-la
+    Then el sistema li assigna la tasca "T1s" a l'anotador "alvaro"
+    And la tasca "T1" deixa de estar disponible per a la resta d anotadors
 
   Scenario: No hi ha tasques disponibles
     Given no hi ha tasques disponibles per a l'anotador

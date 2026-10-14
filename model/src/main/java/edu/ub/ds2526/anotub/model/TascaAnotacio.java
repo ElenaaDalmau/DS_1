@@ -110,7 +110,7 @@ public abstract class TascaAnotacio<T> {
      * Mètode que assigna una anotadora a la tasca i canvia l'estat de la tasca a NO_DISPONIBLE.
      * @param anotadoraAsignada L'anotadora que s'assigna a la tasca.
      */
-    public void assignarTasca(Anotadora anotadoraAsignada){
+    public void assignarAnotadora(Anotadora anotadoraAsignada){
         setAnotadoraAsignada(anotadoraAsignada);
         setEstatTasca(EstatsTasca.ASSIGNADA);
     }

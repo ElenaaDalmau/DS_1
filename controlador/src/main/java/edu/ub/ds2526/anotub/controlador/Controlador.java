@@ -154,8 +154,49 @@ public class Controlador {
             remuneracioPerDada, dataLimit, etiquetesPermeses));
   }
 
+  public String assignarTascaAAnotadora(String titolTasca, String nomUsuari) {
+    TascaAnotacio<?> tasca = trobarTasca(titolTasca);
+    Anotadora anotadora = trobarUsuari(nomUsuari);
 
+    if (tasca == null) {
+      return "No s'ha pogut assignar la tasca.";
+    }
 
+    if (anotadora == null) {
+      return "No s'ha pogut assignar la tasca.";
+    }
+
+    if (!anotadora.getExperteses().toString().contains(tasca.getExpertesaRequerida())) {
+      return "No s'ha pogut assignar la tasca. L'usuari no té l'expertesa requerida.";
+    }
+
+    tasca.assignarAnotadora(anotadora);
+    return "La tasca s'ha assignat correctament a l'usuari.";
+  }
+
+  public boolean isUsuariAsignatATasca(String tasca, String usuari){
+    boolean resultat = false;
+    Anotadora anotadora = trobarUsuari(usuari);
+    TascaAnotacio<?> tascaTrobada = trobarTasca(tasca);
+
+    if(anotadora != null){
+      resultat = anotadora.getNomUsuari().equals(tascaTrobada.getAnotadoraAsignada().getNomUsuari());
+    }
+
+    return resultat;
+  }
+
+  public boolean mateixEstatTasca(TascaAnotacio.EstatsTasca estatsTasca, String tasca){
+    boolean resultat = false;
+    TascaAnotacio<?> tascaTrobada = trobarTasca(tasca);
+
+    if(tascaTrobada != null){
+      resultat = tascaTrobada.getEstatTasca().toString().equals(estatsTasca.toString());
+    }
+
+    return resultat;
+
+  }
 
   /* Auxiliars */
 
@@ -241,25 +282,5 @@ public class Controlador {
     }
 
     return tasca;
-  }
-
-  public String assignarTascaAAnotadora(String titolTasca, String nomUsuari) {
-    TascaAnotacio<?> tasca = trobarTasca(titolTasca);
-    Anotadora anotadora = trobarUsuari(nomUsuari);
-
-    if (tasca == null) {
-      return "No s'ha pogut assignar la tasca.";
-    }
-
-    if (anotadora == null) {
-      return "No s'ha pogut assignar la tasca.";
-    }
-
-    if (!tasca.getExpertesaRequerida().contains(tasca.getTitol())) {
-      return "No s'ha pogut assignar la tasca. L'usuari no té l'expertesa requerida.";
-    }
-
-    tasca.setAnotadoraAsignada(anotadora);
-    return "La tasca s'ha assignat correctament a l'usuari.";
   }
 }
