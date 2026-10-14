@@ -262,5 +262,4 @@ public class Controlador {
     tasca.setAnotadoraAsignada(anotadora);
     return "La tasca s'ha assignat correctament a l'usuari.";
   }
-
 }
