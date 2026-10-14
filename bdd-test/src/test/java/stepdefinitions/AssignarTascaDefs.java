@@ -97,15 +97,13 @@ public class AssignarTascaDefs {
 
     @When("l'anotador {string} consulta les tasques disponibles")
     public void lAnotadorConsultaLesTasquesDisponibles(String nom) {
-        // Write code here that turns the phrase above into concrete actions
         String resultat = state.controlador.trobarTasquesDisponibles("Expertesa sense tasques");
         state.setResultat(resultat);
     }
 
     @Then("el sistema no mostra cap tasca disponible")
-    public void elSistemaNoMostraCapTascaDisponible(String tasca, String usuari){
-        // Write code here that turns the phrase above into concrete actions
-        assertEquals(state.getResultat(), "NO hi ha tasques disponibles");
+    public void elSistemaNoMostraCapTascaDisponible(){
+        assertEquals("NO hi ha tasques disponibles", state.getResultat());
     }
 
     @Given("hi ha una tasca {string} completada i tenim un usuari {string} {string}")

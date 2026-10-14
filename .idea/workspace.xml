@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="TEST">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/AssignarTascaDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/AssignarTascaDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US4-assignar-una-tasca.feature" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US4-assignar-una-tasca.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd-test/target/test-classes/features/US4-assignar-una-tasca.feature" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/target/test-classes/features/US4-assignar-una-tasca.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd-test/target/test-classes/stepdefinitions/AssignarTascaDefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/target/test-classes/stepdefinitions/AssignarTascaDefs.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controlador/target/classes/edu/ub/ds2526/anotub/controlador/Controlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/target/classes/edu/ub/ds2526/anotub/controlador/Controlador.class" afterDir="false" />
     </list>
@@ -66,7 +62,7 @@
     "Cucumber Java.Scenario: Hi ha tasques disponibles i l'anotador se n'assigna una.executor": "Run",
     "Cucumber Java.Scenario: Hi ha una tasca completa i l'anotador intenta assignar-se-la.executor": "Run",
     "Cucumber Java.Scenario: L'anotador amb expertesses té tasques disponibles.executor": "Run",
-    "Cucumber Java.Scenario: No hi ha tasques disponibles.executor": "Debug",
+    "Cucumber Java.Scenario: No hi ha tasques disponibles.executor": "Run",
     "JUnit.RunCucumberTests.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -179,8 +175,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Scenario: No hi ha tasques disponibles" />
-        <item itemvalue="Cucumber Java.Scenario: Hi ha una tasca completa i l'anotador intenta assignar-se-la" />
         <item itemvalue="Cucumber Java.Scenario: Hi ha tasques disponibles i l'anotador se n'assigna una" />
+        <item itemvalue="Cucumber Java.Scenario: Hi ha una tasca completa i l'anotador intenta assignar-se-la" />
         <item itemvalue="Cucumber Java.Feature: US3-tasques-disponibles-anotadors" />
         <item itemvalue="Cucumber Java.Feature: US4-assignar-una-tasca" />
       </list>
@@ -283,20 +279,5 @@
     <MESSAGE value="Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos" />
     <MESSAGE value="TEST" />
     <option name="LAST_COMMIT_MESSAGE" value="TEST" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java</url>
-          <line>156</line>
-          <properties class="edu.ub.ds2526.anotub.controlador.Controlador" method="assignarTascaAAnotadora">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -114,12 +114,11 @@ public class Controlador {
       }
 
       String resultat;
-      if(tasquesDisponibles.isEmpty()) {
+
+      if(tasquesDisponibles.isEmpty())
         resultat = "NO hi ha tasques disponibles";
-      }
-      else{
+      else
         resultat = tasquesDisponibles.toString();
-      }
 
       return resultat;
   }
@@ -157,21 +156,23 @@ public class Controlador {
   public String assignarTascaAAnotadora(String titolTasca, String nomUsuari) {
     TascaAnotacio<?> tasca = trobarTasca(titolTasca);
     Anotadora anotadora = trobarUsuari(nomUsuari);
+    String resultat;
 
-    if (tasca == null) {
-      return "No s'ha pogut assignar la tasca.";
+    if (tasca == null)
+      resultat = "No s'ha pogut assignar la tasca.";
+
+    else if (anotadora == null)
+      resultat = "No s'ha pogut assignar la tasca.";
+
+    else if (!anotadora.getExperteses().toString().contains(tasca.getExpertesaRequerida()))
+      resultat = "No s'ha pogut assignar la tasca. L'usuari no té l'expertesa requerida.";
+
+    else {
+      tasca.assignarAnotadora(anotadora);
+      resultat = "La tasca s'ha assignat correctament a l'usuari.";
     }
 
-    if (anotadora == null) {
-      return "No s'ha pogut assignar la tasca.";
-    }
-
-    if (!anotadora.getExperteses().toString().contains(tasca.getExpertesaRequerida())) {
-      return "No s'ha pogut assignar la tasca. L'usuari no té l'expertesa requerida.";
-    }
-
-    tasca.assignarAnotadora(anotadora);
-    return "La tasca s'ha assignat correctament a l'usuari.";
+    return resultat;
   }
 
   public boolean isUsuariAsignatATasca(String tasca, String usuari){
@@ -180,18 +181,18 @@ public class Controlador {
     TascaAnotacio<?> tascaTrobada = trobarTasca(tasca);
 
     if(anotadora != null){
-      resultat = anotadora.getNomUsuari().equals(tascaTrobada.getAnotadoraAsignada().getNomUsuari());
+      resultat = anotadora == tascaTrobada.getAnotadoraAsignada();
     }
 
     return resultat;
   }
 
-  public boolean mateixEstatTasca(TascaAnotacio.EstatsTasca estatsTasca, String tasca){
+  public boolean mateixEstatTasca(TascaAnotacio.EstatsTasca estatTasca, String tasca){
     boolean resultat = false;
     TascaAnotacio<?> tascaTrobada = trobarTasca(tasca);
 
     if(tascaTrobada != null){
-      resultat = tascaTrobada.getEstatTasca().toString().equals(estatsTasca.toString());
+      resultat = tascaTrobada.getEstatTasca() == estatTasca;
     }
 
     return resultat;
