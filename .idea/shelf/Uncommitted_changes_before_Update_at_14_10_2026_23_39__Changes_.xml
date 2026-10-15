@@ -1,0 +1,12 @@
+<changelist name="Uncommitted_changes_before_Update_at_14_10_2026_23_39_[Changes]" date="1792014011435" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2026_23_39_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 14/10/2026 23:39 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="controlador/target/classes/edu/ub/ds2526/anotub/controlador/Controlador.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="bdd-test/target/test-classes/stepdefinitions/AssignarTascaDefs.class" />
+    <option name="AFTER_PATH" value="bdd-test/target/test-classes/stepdefinitions/AssignarTascaDefs.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_10_2026_23_39_[Changes]/AssignarTascaDefs.class" />
+  </binary>
+</changelist>

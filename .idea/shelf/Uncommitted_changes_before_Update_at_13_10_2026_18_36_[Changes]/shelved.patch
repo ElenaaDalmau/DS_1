@@ -1,0 +1,202 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"NullableNotNullManager\">\r\n    <option name=\"myDefaultNullable\" value=\"org.jetbrains.annotations.Nullable\" />\r\n    <option name=\"myDefaultNotNull\" value=\"org.jetbrains.annotations.NotNull\" />\r\n    <option name=\"myOrdered\" value=\"false\" />\r\n    <option name=\"myNullables\">\r\n      <value>\r\n        <list size=\"11\">\r\n          <item index=\"0\" class=\"java.lang.String\" itemvalue=\"org.jspecify.annotations.Nullable\" />\r\n          <item index=\"1\" class=\"java.lang.String\" itemvalue=\"org.jetbrains.annotations.Nullable\" />\r\n          <item index=\"2\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.qual.Nullable\" />\r\n          <item index=\"3\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NullableDecl\" />\r\n          <item index=\"4\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NullableType\" />\r\n          <item index=\"5\" class=\"java.lang.String\" itemvalue=\"org.eclipse.jdt.annotation.Nullable\" />\r\n          <item index=\"6\" class=\"java.lang.String\" itemvalue=\"edu.umd.cs.findbugs.annotations.Nullable\" />\r\n          <item index=\"7\" class=\"java.lang.String\" itemvalue=\"jakarta.annotation.Nullable\" />\r\n          <item index=\"8\" class=\"java.lang.String\" itemvalue=\"javax.annotation.Nullable\" />\r\n          <item index=\"9\" class=\"java.lang.String\" itemvalue=\"javax.annotation.CheckForNull\" />\r\n          <item index=\"10\" class=\"java.lang.String\" itemvalue=\"org.springframework.lang.Nullable\" />\r\n        </list>\r\n      </value>\r\n    </option>\r\n    <option name=\"myNotNulls\">\r\n      <value>\r\n        <list size=\"11\">\r\n          <item index=\"0\" class=\"java.lang.String\" itemvalue=\"org.jspecify.annotations.NonNull\" />\r\n          <item index=\"1\" class=\"java.lang.String\" itemvalue=\"org.jetbrains.annotations.NotNull\" />\r\n          <item index=\"2\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.qual.NonNull\" />\r\n          <item index=\"3\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NonNullDecl\" />\r\n          <item index=\"4\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NonNullType\" />\r\n          <item index=\"5\" class=\"java.lang.String\" itemvalue=\"org.eclipse.jdt.annotation.NonNull\" />\r\n          <item index=\"6\" class=\"java.lang.String\" itemvalue=\"edu.umd.cs.findbugs.annotations.NonNull\" />\r\n          <item index=\"7\" class=\"java.lang.String\" itemvalue=\"jakarta.annotation.Nonnull\" />\r\n          <item index=\"8\" class=\"java.lang.String\" itemvalue=\"javax.annotation.Nonnull\" />\r\n          <item index=\"9\" class=\"java.lang.String\" itemvalue=\"lombok.NonNull\" />\r\n          <item index=\"10\" class=\"java.lang.String\" itemvalue=\"org.springframework.lang.NonNull\" />\r\n        </list>\r\n      </value>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_27\" project-jdk-name=\"openjdk-27\" project-jdk-type=\"JavaSDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 5196db6973f9317507818873c40bf5641d006514)
++++ b/.idea/misc.xml	(date 1791813451101)
+@@ -11,41 +11,51 @@
+   <component name="NullableNotNullManager">
+     <option name="myDefaultNullable" value="org.jetbrains.annotations.Nullable" />
+     <option name="myDefaultNotNull" value="org.jetbrains.annotations.NotNull" />
+-    <option name="myOrdered" value="false" />
++    <option name="myOrdered" value="true" />
+     <option name="myNullables">
+       <value>
+-        <list size="11">
+-          <item index="0" class="java.lang.String" itemvalue="org.jspecify.annotations.Nullable" />
+-          <item index="1" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
+-          <item index="2" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.Nullable" />
+-          <item index="3" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
+-          <item index="4" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
+-          <item index="5" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.Nullable" />
+-          <item index="6" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
+-          <item index="7" class="java.lang.String" itemvalue="jakarta.annotation.Nullable" />
+-          <item index="8" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
+-          <item index="9" class="java.lang.String" itemvalue="javax.annotation.CheckForNull" />
+-          <item index="10" class="java.lang.String" itemvalue="org.springframework.lang.Nullable" />
++        <list size="16">
++          <item index="0" class="java.lang.String" itemvalue="org.springframework.lang.Nullable" />
++          <item index="1" class="java.lang.String" itemvalue="org.jspecify.annotations.Nullable" />
++          <item index="2" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
++          <item index="3" class="java.lang.String" itemvalue="android.annotation.Nullable" />
++          <item index="4" class="java.lang.String" itemvalue="androidx.annotation.Nullable" />
++          <item index="5" class="java.lang.String" itemvalue="com.android.annotations.Nullable" />
++          <item index="6" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />
++          <item index="7" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNullable" />
++          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.Nullable" />
++          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
++          <item index="10" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
++          <item index="11" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.Nullable" />
++          <item index="12" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
++          <item index="13" class="java.lang.String" itemvalue="jakarta.annotation.Nullable" />
++          <item index="14" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
++          <item index="15" class="java.lang.String" itemvalue="javax.annotation.CheckForNull" />
+         </list>
+       </value>
+     </option>
+     <option name="myNotNulls">
+       <value>
+-        <list size="11">
+-          <item index="0" class="java.lang.String" itemvalue="org.jspecify.annotations.NonNull" />
+-          <item index="1" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
+-          <item index="2" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.NonNull" />
+-          <item index="3" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
+-          <item index="4" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
+-          <item index="5" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.NonNull" />
+-          <item index="6" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
+-          <item index="7" class="java.lang.String" itemvalue="jakarta.annotation.Nonnull" />
+-          <item index="8" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
+-          <item index="9" class="java.lang.String" itemvalue="lombok.NonNull" />
+-          <item index="10" class="java.lang.String" itemvalue="org.springframework.lang.NonNull" />
++        <list size="16">
++          <item index="0" class="java.lang.String" itemvalue="org.springframework.lang.NonNull" />
++          <item index="1" class="java.lang.String" itemvalue="org.jspecify.annotations.NonNull" />
++          <item index="2" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
++          <item index="3" class="java.lang.String" itemvalue="android.annotation.NonNull" />
++          <item index="4" class="java.lang.String" itemvalue="androidx.annotation.NonNull" />
++          <item index="5" class="java.lang.String" itemvalue="com.android.annotations.NonNull" />
++          <item index="6" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />
++          <item index="7" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNonNull" />
++          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.NonNull" />
++          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
++          <item index="10" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
++          <item index="11" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.NonNull" />
++          <item index="12" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
++          <item index="13" class="java.lang.String" itemvalue="jakarta.annotation.Nonnull" />
++          <item index="14" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
++          <item index="15" class="java.lang.String" itemvalue="lombok.NonNull" />
+         </list>
+       </value>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_27" project-jdk-name="openjdk-27" project-jdk-type="JavaSDK" />
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="corretto-21" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b22082aa-c6a3-4579-a6cc-cf8b98d89be0\" name=\"Changes\" comment=\"Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"Exception\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;eljeser&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/ElenaaDalmau/DS_1.git&quot;,\r\n    &quot;accountId&quot;: &quot;284f2dab-f59d-467e-ae91-55d87e0dbe05&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8,\r\n  &quot;fromUser&quot;: false\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3K5EE3WdvyEsw3RTKyFaK2jKhQ9\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Cucumber Java.Feature: US3-assignacio-tasques-anotadors.executor&quot;: &quot;Run&quot;,\r\n    &quot;Cucumber Java.Scenario: L'anotador amb expertesses té tasques disponibles.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.RunCucumberTests.executor&quot;: &quot;Run&quot;,\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,\r\n    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Scenario: L'anotador amb expertesses té tasques disponibles\" type=\"CucumberJavaRunConfigurationType\" factoryName=\"Cucumber java\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"CUCUMBER_CORE_VERSION\" value=\"7\" />\r\n      <option name=\"FILE_PATH\" value=\"$PROJECT_DIR$/bdd-test/src/test/resources/features/US3-tasques-disponibles-anotadors.feature\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"io.cucumber.core.cli.Main\" />\r\n      <module name=\"bdd-test\" />\r\n      <option name=\"NAME_FILTER\" value=\"^L'anotador amb expertesses té tasques disponibles$\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\" --plugin teamcity --name &quot;^L'anotador amb expertesses té tasques disponibles$&quot;\" />\r\n      <option name=\"SUGGESTED_NAME\" value=\"Scenario: L'anotador amb expertesses té tasques disponibles\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_WORKING_DIR$\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"io.cucumber.core.cli.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Cucumber Java.Scenario: L'anotador amb expertesses té tasques disponibles\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b22082aa-c6a3-4579-a6cc-cf8b98d89be0\" name=\"Changes\" comment=\"\" />\r\n      <created>1790838913848</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1790838913848</updated>\r\n      <workItem from=\"1790838915191\" duration=\"281000\" />\r\n      <workItem from=\"1791468989217\" duration=\"71000\" />\r\n      <workItem from=\"1791469646465\" duration=\"1619000\" />\r\n      <workItem from=\"1791474467527\" duration=\"3140000\" />\r\n      <workItem from=\"1791496517913\" duration=\"421000\" />\r\n      <workItem from=\"1791577454941\" duration=\"8250000\" />\r\n      <workItem from=\"1791627639016\" duration=\"2666000\" />\r\n      <workItem from=\"1791707210540\" duration=\"6862000\" />\r\n      <workItem from=\"1791737536617\" duration=\"14168000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Initial Commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1791587626538</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1791587626540</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1791760966138</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1791760966140</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Initial Commit\" />\r\n    <MESSAGE value=\"Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 5196db6973f9317507818873c40bf5641d006514)
++++ b/.idea/workspace.xml	(date 1791909330347)
+@@ -4,7 +4,14 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos" />
++    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="TEST">
++      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/AssignarTascaDefs.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/CompletarTascaDefs.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US4-assignar-una-tasca.feature" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/USX-completar-tasca.feature" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -13,12 +20,17 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
++        <option value="Exception" />
+         <option value="Class" />
+-        <option value="Exception" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="test" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory">{
+@@ -30,7 +42,7 @@
+   <component name="GithubPullRequestsUISettings">{
+   &quot;selectedUrlAndAccountId&quot;: {
+     &quot;url&quot;: &quot;https://github.com/ElenaaDalmau/DS_1.git&quot;,
+-    &quot;accountId&quot;: &quot;284f2dab-f59d-467e-ae91-55d87e0dbe05&quot;
++    &quot;accountId&quot;: &quot;8466033c-a8c3-4628-8a2d-40434763199f&quot;
+   }
+ }</component>
+   <component name="ProjectColorInfo">{
+@@ -60,7 +72,8 @@
+     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+     &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+   }
+ }</component>
+   <component name="RunManager">
+@@ -92,8 +105,7 @@
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
++        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33813.55" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -130,15 +142,35 @@
+       <option name="project" value="LOCAL" />
+       <updated>1791760966140</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="TEST">
++      <option name="closed" value="true" />
++      <created>1791813535552</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1791813535552</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Initial Commit" />
+     <MESSAGE value="Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos" />
++    <MESSAGE value="TEST" />
++    <option name="LAST_COMMIT_MESSAGE" value="TEST" />
+   </component>
+ </project>
+\ No newline at end of file
