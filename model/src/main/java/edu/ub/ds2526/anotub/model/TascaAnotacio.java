@@ -1,6 +1,7 @@
 package edu.ub.ds2526.anotub.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class TascaAnotacio<T> {
@@ -39,6 +40,10 @@ public abstract class TascaAnotacio<T> {
             this.anotadoraAsignada = null;
             this.estatTasca = EstatsTasca.PENDENT;
             this.etiquetesPermeses = etiquetesPermeses;
+
+            // Inicialitzem les llistes buides per evitar problemes
+            this.dadesFetes = new ArrayList<>();
+            this.dadesPendents = new ArrayList<>();
         }
 
     // Getters i Setters
@@ -135,7 +140,21 @@ public abstract class TascaAnotacio<T> {
     /**
      * Mètode que canvia l'estat d'una dada a feta i actualitza la remuneració de la tasca.
      */
-    public void ferDada() {
+    public void ferDada(T dada) {
+        // Existeix la llista i la dada està a la llista de PENDENT
+        if (dadesPendents!=null && dadesPendents.contains(dada)) {
+            // Afegim la dada a la llista de COMPLETA
+            dadesFetes.add(dada);
+            dadesPendents.remove(dada);
+
+            // Marquem dada com anotada
+            if(dada instanceof Dada) {
+                ((Dada) dada).setAnotada(true);
+            }
+            // Actualitzem la remuneració
+            remuneracio += remuneracioPerDada;
+            avaluarEstatTasca();
+        }
     }
 
     /**

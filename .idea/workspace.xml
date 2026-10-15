@@ -4,15 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="TEST">
+    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="epfka">
+      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/CompletarTascaStepDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/AssignarTascaDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/AssignarTascaStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/CompletarTascaDefs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US6-completar-tasca.feature" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US6-completar-tasca.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd-test/target/test-classes/stepdefinitions/AssignarTascaDefs.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlador/target/classes/edu/ub/ds2526/anotub/controlador/Controlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/target/classes/edu/ub/ds2526/anotub/controlador/Controlador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/target/classes/edu/ub/ds2526/anotub/controlador/Controlador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/Dada.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/Dada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/TascaAnotacio.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/TascaAnotacio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/elena/Desktop/Disseny de Software/Priv_practica1" value="3KhhZi8OJxaH4GUe4lSaRIRfSAb" />
+    </persistenceIdMap>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,6 +62,21 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectSessionTemplates">
+    <option name="inlineTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,9 +86,13 @@
     "Cucumber Java.Feature: US3-assignacio-tasques-anotadors.executor": "Run",
     "Cucumber Java.Feature: US3-tasques-disponibles-anotadors.executor": "Run",
     "Cucumber Java.Feature: US4-assignar-una-tasca.executor": "Run",
+    "Cucumber Java.Scenario: Hi ha tasques disponibles i l'anotador se n'assigna una (1).executor": "Run",
     "Cucumber Java.Scenario: Hi ha tasques disponibles i l'anotador se n'assigna una.executor": "Run",
     "Cucumber Java.Scenario: Hi ha una tasca completa i l'anotador intenta assignar-se-la.executor": "Run",
     "Cucumber Java.Scenario: L'anotador amb expertesses té tasques disponibles.executor": "Run",
+    "Cucumber Java.Scenario: L'anotador no té una tasca assignada i intenta consultar les dades.executor": "Run",
+    "Cucumber Java.Scenario: L'anotador té una tasca assignada i anota l'última dada com anotada.executor": "Run",
+    "Cucumber Java.Scenario: L'anotador té una tasca assignada, anota una dada com anotada però no és l'ultima.executor": "Run",
     "Cucumber Java.Scenario: No hi ha tasques disponibles.executor": "Run",
     "JUnit.RunCucumberTests.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -69,6 +100,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -78,25 +110,12 @@
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: No hi ha tasques disponibles">
-    <configuration name="Feature: US3-tasques-disponibles-anotadors" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/bdd-test/src/test/resources/features/US3-tasques-disponibles-anotadors.feature" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="bdd-test" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
-      <option name="SUGGESTED_NAME" value="Feature: US3-tasques-disponibles-anotadors" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="stepdefinitions" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cucumber Java.Feature: US4-assignar-una-tasca">
     <configuration name="Feature: US4-assignar-una-tasca" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/bdd-test/src/test/resources/features/US4-assignar-una-tasca.feature" />
@@ -115,14 +134,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Hi ha tasques disponibles i l'anotador se n'assigna una" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: US6-completar-tasca" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/bdd-test/src/test/resources/features/US4-assignar-una-tasca.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/bdd-test/src/test/resources/features/US6-completar-tasca.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="bdd-test" />
-      <option name="NAME_FILTER" value="^Hi ha tasques disponibles i l'anotador se n'assigna una$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Hi ha tasques disponibles i l'anotador se n'assigna una$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Hi ha tasques disponibles i l'anotador se n'assigna una" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity" />
+      <option name="SUGGESTED_NAME" value="Feature: US6-completar-tasca" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -134,14 +152,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Hi ha una tasca completa i l'anotador intenta assignar-se-la" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: L'anotador no té una tasca assignada i intenta consultar les dades" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/bdd-test/src/test/resources/features/US4-assignar-una-tasca.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/bdd-test/src/test/resources/features/US6-completar-tasca.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="bdd-test" />
-      <option name="NAME_FILTER" value="^Hi ha una tasca completa i l\'anotador intenta assignar\-se\-la$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Hi ha una tasca completa i l\'anotador intenta assignar\-se\-la$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Hi ha una tasca completa i l'anotador intenta assignar-se-la" />
+      <option name="NAME_FILTER" value="^L\'anotador no té una tasca assignada i intenta consultar les dades$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^L\'anotador no té una tasca assignada i intenta consultar les dades$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: L'anotador no té una tasca assignada i intenta consultar les dades" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -153,14 +171,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: No hi ha tasques disponibles" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: L'anotador té una tasca assignada i anota l'última dada com anotada" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="7" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/bdd-test/src/test/resources/features/US4-assignar-una-tasca.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/bdd-test/src/test/resources/features/US6-completar-tasca.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="bdd-test" />
-      <option name="NAME_FILTER" value="^No hi ha tasques disponibles$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^No hi ha tasques disponibles$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: No hi ha tasques disponibles" />
+      <option name="NAME_FILTER" value="^L\'anotador té una tasca assignada i anota l\'última dada com anotada$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^L\'anotador té una tasca assignada i anota l\'última dada com anotada$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: L'anotador té una tasca assignada i anota l'última dada com anotada" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: L'anotador té una tasca assignada, anota una dada com anotada però no és l'ultima" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/bdd-test/src/test/resources/features/US6-completar-tasca.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="bdd-test" />
+      <option name="NAME_FILTER" value="^L\'anotador té una tasca assignada\, anota una dada com anotada però no és l\'ultima$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^L\'anotador té una tasca assignada\, anota una dada com anotada però no és l\'ultima$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: L'anotador té una tasca assignada, anota una dada com anotada però no és l'ultima" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -174,11 +211,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: No hi ha tasques disponibles" />
-        <item itemvalue="Cucumber Java.Scenario: Hi ha tasques disponibles i l'anotador se n'assigna una" />
-        <item itemvalue="Cucumber Java.Scenario: Hi ha una tasca completa i l'anotador intenta assignar-se-la" />
-        <item itemvalue="Cucumber Java.Feature: US3-tasques-disponibles-anotadors" />
         <item itemvalue="Cucumber Java.Feature: US4-assignar-una-tasca" />
+        <item itemvalue="Cucumber Java.Feature: US6-completar-tasca" />
+        <item itemvalue="Cucumber Java.Scenario: L'anotador no té una tasca assignada i intenta consultar les dades" />
+        <item itemvalue="Cucumber Java.Scenario: L'anotador té una tasca assignada, anota una dada com anotada però no és l'ultima" />
+        <item itemvalue="Cucumber Java.Scenario: L'anotador té una tasca assignada i anota l'última dada com anotada" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791995708211</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="epfka">
+      <option name="closed" value="true" />
+      <created>1792012562419</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1792012562419</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +323,22 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Commit 1:&#10;   - Dada.java i subclasses Imatge.java i Document.java fets&#10;   - EtiquetesCategoriques.java fet&#10;   - LocalitzacioObjecte.java només creat .java&#10;   - TascaAnotacio.java i subclasses TascaAnotacioDocument.java i TascaAnotacioImatge.java fets&#10;   - TasquesDisponiblesAnotadorsStepDefs.java encara no començat&#10;   - Controlador.java creat nous mètodes pels testos" />
     <MESSAGE value="TEST" />
-    <option name="LAST_COMMIT_MESSAGE" value="TEST" />
+    <MESSAGE value="epfka" />
+    <option name="LAST_COMMIT_MESSAGE" value="epfka" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java</url>
+          <line>161</line>
+          <properties class="edu.ub.ds2526.anotub.controlador.Controlador" method="assignarTascaAAnotadora">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -45,4 +45,11 @@ public abstract class Dada {
         this.etiquetes.addAll(etiquetes);
     }
 
+    public boolean isAnotada() {
+        return anotada;
+    }
+
+    public void setAnotada(boolean anotada) {
+        this.anotada = anotada;
+    }
 }

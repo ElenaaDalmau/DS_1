@@ -114,11 +114,12 @@ public class Controlador {
       }
 
       String resultat;
-
-      if(tasquesDisponibles.isEmpty())
+      if(tasquesDisponibles.isEmpty()) {
         resultat = "NO hi ha tasques disponibles";
-      else
+      }
+      else{
         resultat = tasquesDisponibles.toString();
+      }
 
       return resultat;
   }
@@ -126,6 +127,11 @@ public class Controlador {
   public void canviarEstatTasca(TascaAnotacio.EstatsTasca estatTascaNou, String titolTasca) {
     TascaAnotacio<?> tasca = trobarTasca(titolTasca);
     tasca.setEstatTasca(estatTascaNou);
+
+    if(tasca==null){
+        throw new IllegalArgumentException("No existeix tasca amb aquest títol.");
+    }
+
   }
 
   public void eliminarTasca(String titolTasca)  {
@@ -156,23 +162,28 @@ public class Controlador {
   public String assignarTascaAAnotadora(String titolTasca, String nomUsuari) {
     TascaAnotacio<?> tasca = trobarTasca(titolTasca);
     Anotadora anotadora = trobarUsuari(nomUsuari);
-    String resultat;
 
-    if (tasca == null)
-      resultat = "No s'ha pogut assignar la tasca.";
-
-    else if (anotadora == null)
-      resultat = "No s'ha pogut assignar la tasca.";
-
-    else if (!anotadora.getExperteses().toString().contains(tasca.getExpertesaRequerida()))
-      resultat = "No s'ha pogut assignar la tasca. L'usuari no té l'expertesa requerida.";
-
-    else {
-      tasca.assignarAnotadora(anotadora);
-      resultat = "La tasca s'ha assignat correctament a l'usuari.";
+    if (tasca == null) {
+      return "No s'ha pogut assignar la tasca.";
     }
 
-    return resultat;
+    if (anotadora == null) {
+      return "No s'ha pogut assignar la tasca.";
+    }
+
+    if (!anotadora.getExperteses().toString().contains(tasca.getExpertesaRequerida())) {
+      return "No s'ha pogut assignar la tasca. L'usuari no té l'expertesa requerida.";
+    }
+
+    // Comprovar si la tasca està disponible abans d'assignar-la
+    if (tasca.getEstatTasca() == TascaAnotacio.EstatsTasca.COMPLETA) {
+      return "No s'ha pogut assignar la tasca. La tasca ja està completada.";
+    }
+
+    tasca.assignarAnotadora(anotadora);
+    return "La tasca s'ha assignat correctament a l'usuari.";
+
+
   }
 
   public boolean isUsuariAsignatATasca(String tasca, String usuari){
@@ -180,19 +191,19 @@ public class Controlador {
     Anotadora anotadora = trobarUsuari(usuari);
     TascaAnotacio<?> tascaTrobada = trobarTasca(tasca);
 
-    if(anotadora != null){
-      resultat = anotadora == tascaTrobada.getAnotadoraAsignada();
+    if(anotadora != null && tascaTrobada != null && tascaTrobada.getAnotadoraAsignada() != null){
+      resultat = anotadora.getNomUsuari().equals(tascaTrobada.getAnotadoraAsignada().getNomUsuari());
     }
 
     return resultat;
   }
 
-  public boolean mateixEstatTasca(TascaAnotacio.EstatsTasca estatTasca, String tasca){
+  public boolean mateixEstatTasca(TascaAnotacio.EstatsTasca estatsTasca, String tasca){
     boolean resultat = false;
     TascaAnotacio<?> tascaTrobada = trobarTasca(tasca);
 
     if(tascaTrobada != null){
-      resultat = tascaTrobada.getEstatTasca() == estatTasca;
+      resultat = tascaTrobada.getEstatTasca().toString().equals(estatsTasca.toString());
     }
 
     return resultat;
@@ -292,6 +303,20 @@ public class Controlador {
                                         List<EtiquetesCategoriques.TipusEtiquetesCategoriques> etiquetesPermeses){
     tasques.add(new TascaAnotacioImatge(titol, instrucions, expertesaRequerida,
             remuneracioPerDada, dataLimit, etiquetesPermeses));
+  }
+
+  public TascaAnotacio<?> obtenirTasca(String titolTasca) {
+    return trobarTasca(titolTasca);
+  }
+
+  public List<Imatge> consultarDadesDisponiblesDeTasca(String titolTasca, String nomUsuari) {
+    TascaAnotacio<?> tasca = trobarTasca(titolTasca);
+
+    if (tasca != null && tasca instanceof TascaAnotacioImatge && isUsuariAsignatATasca(titolTasca, nomUsuari)) {
+      return ((TascaAnotacioImatge) tasca).getDadesPendents();
+    }
+
+    return new ArrayList<>();
   }
 
 }

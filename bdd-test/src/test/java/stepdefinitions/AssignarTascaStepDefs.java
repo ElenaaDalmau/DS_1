@@ -2,7 +2,6 @@ package stepdefinitions;
 
 import edu.ub.ds2526.anotub.model.EtiquetesCategoriques;
 import edu.ub.ds2526.anotub.model.TascaAnotacio;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -13,11 +12,11 @@ import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-public class AssignarTascaDefs {
+public class AssignarTascaStepDefs {
 
     private final WorldState state;
 
-    public AssignarTascaDefs(WorldState state) {
+    public AssignarTascaStepDefs(WorldState state) {
         this.state = state;
     }
 
@@ -91,19 +90,21 @@ public class AssignarTascaDefs {
                 "CAIXESBBXXX",
                 nom + "@example.com",
                 "600123123",
-                List.of("Expertesa sense tasques"));
+                List.of("Expertesa_sense_tasques"));
 
     }
 
     @When("l'anotador {string} consulta les tasques disponibles")
     public void lAnotadorConsultaLesTasquesDisponibles(String nom) {
-        String resultat = state.controlador.trobarTasquesDisponibles("Expertesa sense tasques");
+        // Write code here that turns the phrase above into concrete actions
+        String resultat = state.controlador.trobarTasquesDisponibles("Expertesa_sense_tasques sense tasques");
         state.setResultat(resultat);
     }
 
     @Then("el sistema no mostra cap tasca disponible")
     public void elSistemaNoMostraCapTascaDisponible(){
-        assertEquals("NO hi ha tasques disponibles", state.getResultat());
+        // Write code here that turns the phrase above into concrete actions
+        assertEquals(state.getResultat(), "NO hi ha tasques disponibles");
     }
 
     @Given("hi ha una tasca {string} completada i tenim un usuari {string} {string}")
@@ -139,18 +140,20 @@ public class AssignarTascaDefs {
                         EtiquetesCategoriques.TipusEtiquetesCategoriques.LOCALITZACIO_OBJECTE));
     // Canviem l'estat de la tasca a COMPLETADA:
         state.controlador.canviarEstatTasca(TascaAnotacio.EstatsTasca.COMPLETA, tasca);
-
+        assertTrue(state.controlador.mateixEstatTasca(TascaAnotacio.EstatsTasca.COMPLETA, tasca));
     }
 
     @When("l'anotador {string} intenta assignar-se la tasca {string} completada")
     public void lAnotadorIntentaAssignarSeLaTascaCompletada(String nom, String tasca) {
         // Write code here that turns the phrase above into concrete actions
-        state.controlador.assignarTascaAAnotadora(tasca, nom);
+        String res = state.controlador.assignarTascaAAnotadora(tasca, nom);
+        System.out.println("Resultat de l'intent d'assignació: " + res);
     }
 
     @Then("el sistema no li permet assignar-se la tasca {string} completada")
     public void elSistemaNoLiPermetAssignarSeLaTascaCompletada(String tasca) {
         // Write code here that turns the phrase above into concrete actions
-        assertTrue(state.controlador.mateixEstatTasca(TascaAnotacio.EstatsTasca.COMPLETA, tasca));
+        assertTrue(state.controlador.mateixEstatTasca(TascaAnotacio.EstatsTasca.COMPLETA, tasca),
+                "La tasca hauria de seguir completada i no assignada.");
     }
 }
