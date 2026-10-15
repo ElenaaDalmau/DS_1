@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="epfka">
-      <change afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/CompletarTascaStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/AssignarTascaDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/AssignarTascaStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/java/stepdefinitions/CompletarTascaDefs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US6-completar-tasca.feature" beforeDir="false" afterPath="$PROJECT_DIR$/bdd-test/src/test/resources/features/US6-completar-tasca.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd-test/target/test-classes/stepdefinitions/AssignarTascaDefs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/src/main/java/edu/ub/ds2526/anotub/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlador/target/classes/edu/ub/ds2526/anotub/controlador/Controlador.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/Dada.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/Dada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/TascaAnotacio.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/edu/ub/ds2526/anotub/model/TascaAnotacio.java" afterDir="false" />
-    </list>
+    <list default="true" id="b22082aa-c6a3-4579-a6cc-cf8b98d89be0" name="Changes" comment="epfka" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,6 +75,7 @@
     "Cucumber Java.Feature: US3-assignacio-tasques-anotadors.executor": "Run",
     "Cucumber Java.Feature: US3-tasques-disponibles-anotadors.executor": "Run",
     "Cucumber Java.Feature: US4-assignar-una-tasca.executor": "Run",
+    "Cucumber Java.Feature: US6-completar-tasca.executor": "Run",
     "Cucumber Java.Scenario: Hi ha tasques disponibles i l'anotador se n'assigna una (1).executor": "Run",
     "Cucumber Java.Scenario: Hi ha tasques disponibles i l'anotador se n'assigna una.executor": "Run",
     "Cucumber Java.Scenario: Hi ha una tasca completa i l'anotador intenta assignar-se-la.executor": "Run",
@@ -302,7 +292,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792012562419</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="epfka">
+      <option name="closed" value="true" />
+      <created>1792023829162</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1792023829162</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
